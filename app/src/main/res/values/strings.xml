@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">LayoutsTask</string>
     <string name="depart_label">depart</string>
+    <string name="return_label">return</string>
     <string name="default_departure_date">16 sep 2019</string>
+    <string name="default_return_date">17 sep 2019</string>
     <string name="free_seats_label">Free seats: </string>
     <string name="default_departure_free_seats">3</string>
     <string name="default_return_free_seats">5</string>
-    <string name="default_cost">435 byn</string>
+    <string name="default_cost_departure">435 byn</string>
+    <string name="default_cost_return">488 byn</string>
     <string name="default_departure_from">msq</string>
     <string name="default_departure_to">flo</string>
     <string name="default_return_from">flo</string>

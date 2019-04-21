@@ -5,7 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorBackground">#fafafa</color>
     <color name="colorDepart">#CC0000</color>
-    <color name="colorReturn">#0099cc</color>
+    <color name="colorReturn">#0099CC</color>
     <color name="colorCities">#77CA27</color>
     <color name="colorPlaneIcons">#4d5fab</color>
     <color name="colorCost">#737373</color>

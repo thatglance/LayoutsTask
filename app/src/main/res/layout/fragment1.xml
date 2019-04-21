@@ -31,7 +31,8 @@
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"/>
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:foreground="@drawable/ic_check_24dp" android:foregroundGravity="center"/>
         <View
                 android:id="@+id/dividerDepart"
                 android:layout_width="0dp"
@@ -66,16 +67,16 @@
                 tools:text="@string/free_seats_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/freeSeatsTextView" app:layout_constraintStart_toStartOf="@+id/departLabel"
+                android:id="@+id/freeSeatsDeparture" app:layout_constraintStart_toStartOf="@+id/departLabel"
                 app:layout_constraintTop_toBottomOf="@+id/departLabel" android:layout_marginTop="32dp"
                 android:textSize="12sp" android:textColor="@color/colorFreeSeats"
-                app:layout_constraintBaseline_toBaselineOf="@+id/costTextView"/>
+                app:layout_constraintBaseline_toBaselineOf="@+id/departureCostTextView"/>
         <TextView
                 android:text=""
-                tools:text="@string/default_cost"
+                tools:text="@string/default_cost_departure"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/costTextView" app:layout_constraintEnd_toEndOf="@+id/departureDateTextView"
+                android:id="@+id/departureCostTextView" app:layout_constraintEnd_toEndOf="@+id/departureDateTextView"
                 android:textSize="22sp" android:textAllCaps="true" android:textColor="@color/colorCost"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/departureDateTextView" android:layout_marginTop="32dp"/>
@@ -88,7 +89,7 @@
                 android:textSize="38sp" android:textAllCaps="true" android:textColor="@color/colorCities"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/departureFlightImage"
-                app:layout_constraintTop_toBottomOf="@+id/freeSeatsTextView" android:layout_marginTop="32dp"/>
+                app:layout_constraintTop_toBottomOf="@+id/freeSeatsDeparture" android:layout_marginTop="32dp"/>
         <TextView
                 android:text=""
                 tools:text="@string/default_departure_to"
@@ -96,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/departureTo"
                 android:textSize="38sp" android:textAllCaps="true" android:textColor="@color/colorCities"
-                app:layout_constraintStart_toEndOf="@+id/departureFlightImage" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/departureFlightImage"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBaseline_toBaselineOf="@+id/departureFrom"/>
         <ImageView
@@ -175,6 +177,138 @@
                 app:layout_constraintEnd_toEndOf="@+id/departureDateTextView"
                 app:layout_constraintTop_toTopOf="@+id/departureFlightTimeImage"
                 app:layout_constraintBottom_toBottomOf="@+id/departureFlightTimeImage"/>
+        <TextView
+                android:text=""
+                tools:text="@string/return_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnLabel"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp" app:layout_constraintTop_toBottomOf="@+id/dividerDepart"
+                android:layout_marginTop="32dp" android:textSize="25sp" android:textStyle="bold"
+                android:textColor="@color/colorReturn" android:textAllCaps="true"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_return_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnDateTextView" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="32dp" android:layout_marginRight="32dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/returnLabel" android:textSize="20sp"
+                android:textColor="@color/colorDateTime" android:textAllCaps="true"/>
+        <TextView
+                android:text=""
+                tools:text="@string/free_seats_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/freeSeatsReturn" app:layout_constraintStart_toStartOf="@+id/returnLabel"
+                android:textSize="12sp" android:textColor="@color/colorFreeSeats"
+                app:layout_constraintBaseline_toBaselineOf="@+id/returnCostTextView"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_cost_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnCostTextView" app:layout_constraintEnd_toEndOf="@+id/returnDateTextView"
+                android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/returnDateTextView"
+                android:textSize="22sp" android:textStyle="bold" android:textAllCaps="true"
+                android:textColor="@color/colorCost"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnFrom" android:textSize="38sp"
+                android:textAllCaps="true" android:textColor="@color/colorCities"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/returnFlightImage" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/freeSeatsReturn"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnTo" android:textAllCaps="true"
+                android:textColor="@color/colorCities" android:textSize="38sp"
+                app:layout_constraintStart_toEndOf="@+id/returnFlightImage" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBaseline_toBaselineOf="@+id/returnFrom"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_flight_50dp"
+                android:id="@+id/returnFlightImage" android:rotation="90"
+                android:contentDescription="@string/flight_image_description"
+                app:layout_constraintStart_toEndOf="@+id/returnFrom" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/returnTo"
+                app:layout_constraintTop_toTopOf="@+id/returnFrom"
+                app:layout_constraintBottom_toBottomOf="@+id/returnFrom"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_return_time_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnLeaveTime" android:textSize="18sp"
+                android:textColor="@color/colorDateTime" app:layout_constraintStart_toStartOf="@+id/returnLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/returnFlightTakeoffImage"
+                android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/returnFrom"
+                android:layout_marginBottom="24dp" app:layout_constraintBottom_toTopOf="@+id/dividerReturn"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_flight_takeoff_24dp"
+                android:id="@+id/returnFlightTakeoffImage"
+                android:contentDescription="@string/flight_takeoff_image_description"
+                app:layout_constraintStart_toEndOf="@+id/returnLeaveTime" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/returnArrowImage"
+                app:layout_constraintTop_toTopOf="@+id/returnLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/returnLeaveTime"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_trending_flat_black_24dp"
+                android:id="@+id/returnArrowImage" android:contentDescription="@string/arrow_image_description"
+                app:layout_constraintStart_toEndOf="@+id/returnFlightTakeoffImage"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/returnArriveTime"
+                app:layout_constraintTop_toTopOf="@+id/returnLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/returnLeaveTime"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_return_time_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnArriveTime" android:textSize="18sp"
+                android:textColor="@color/colorDateTime" app:layout_constraintStart_toEndOf="@+id/returnArrowImage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/returnFlightLandImage"
+                app:layout_constraintTop_toTopOf="@+id/returnLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/returnLeaveTime"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_flight_land_24dp"
+                android:id="@+id/returnFlightLandImage"
+                android:contentDescription="@string/flight_land_image_description"
+                app:layout_constraintStart_toEndOf="@+id/returnArriveTime" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="@+id/returnFlightImage"
+                app:layout_constraintTop_toTopOf="@+id/returnLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/returnLeaveTime"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_query_builder_24dp"
+                android:id="@+id/returnFlightTimeImage"
+                android:contentDescription="@string/flight_time_image_description"
+                app:layout_constraintTop_toTopOf="@+id/returnLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/returnLeaveTime"
+                app:layout_constraintEnd_toStartOf="@+id/returnFlightTime" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_return_time_flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/returnDateTextView" android:id="@+id/returnFlightTime"
+                android:textSize="16sp"
+                android:textColor="@color/colorFreeSeats"
+                app:layout_constraintTop_toTopOf="@+id/returnFlightTimeImage"
+                app:layout_constraintBottom_toBottomOf="@+id/returnFlightTimeImage"/>
 
     </android.support.constraint.ConstraintLayout>
     </ScrollView>
