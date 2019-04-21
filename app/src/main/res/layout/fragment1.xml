@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground">
+
+        <View
+                android:id="@+id/dividerReturn"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorFreeSeats"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+                android:layout_marginBottom="32dp" android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                android:layout_marginRight="16dp" android:layout_marginEnd="16dp"/>
+        <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true" android:focusable="true" app:srcCompat="@color/colorCities"
+                android:id="@+id/floatingActionButton"
+                app:backgroundTint="@color/colorCities" android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"/>
+        <View
+                android:id="@+id/dividerDepart"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorFreeSeats"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                android:layout_marginRight="16dp" android:layout_marginEnd="16dp"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/dividerReturn"/>
+        <TextView
+                android:text="@string/depart_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departLabel"
+                android:textSize="25sp" android:textAllCaps="true" android:textColor="@color/colorDepart"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toTopOf="parent" android:textStyle="bold"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureDateTextView"
+                android:textSize="20sp" android:textAllCaps="true" android:textColor="@color/colorDateTime"
+                app:layout_constraintBaseline_toBaselineOf="@+id/departLabel" android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="32dp"/>
+        <TextView
+                android:text=""
+                tools:text="@string/free_seats_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/freeSeatsTextView" app:layout_constraintStart_toStartOf="@+id/departLabel"
+                app:layout_constraintTop_toBottomOf="@+id/departLabel" android:layout_marginTop="32dp"
+                android:textSize="12sp" android:textColor="@color/colorFreeSeats"
+                app:layout_constraintBaseline_toBaselineOf="@+id/costTextView"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/costTextView" app:layout_constraintEnd_toEndOf="@+id/departureDateTextView"
+                android:textSize="22sp" android:textAllCaps="true" android:textColor="@color/colorCost"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/departureDateTextView" android:layout_marginTop="32dp"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureFrom"
+                android:textSize="38sp" android:textAllCaps="true" android:textColor="@color/colorCities"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/departureFlightImage"
+                app:layout_constraintTop_toBottomOf="@+id/freeSeatsTextView" android:layout_marginTop="32dp"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureTo"
+                android:textSize="38sp" android:textAllCaps="true" android:textColor="@color/colorCities"
+                app:layout_constraintStart_toEndOf="@+id/departureFlightImage" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/departureFrom"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_flight_50dp"
+                android:id="@+id/departureFlightImage" android:rotation="90"
+                app:layout_constraintStart_toEndOf="@+id/departureFrom" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/departureTo"
+                app:layout_constraintTop_toTopOf="@+id/departureFrom"
+                app:layout_constraintBottom_toBottomOf="@+id/departureFrom"
+                android:contentDescription="@string/flight_image_description"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_time_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureLeaveTime"
+                app:layout_constraintEnd_toStartOf="@+id/departureFlightTakeoffImage"
+                app:layout_constraintStart_toStartOf="@+id/departLabel"
+                android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/departureFrom"
+                android:textSize="18sp" android:textColor="@color/colorDateTime" android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/dividerDepart"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_flight_takeoff_24dp"
+                android:id="@+id/departureFlightTakeoffImage"
+                app:layout_constraintStart_toEndOf="@+id/departureLeaveTime"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/departureArrowImage"
+                app:layout_constraintTop_toTopOf="@+id/departureLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/departureLeaveTime"
+                android:contentDescription="@string/flight_takeoff_image_description"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_trending_flat_black_24dp"
+                android:id="@+id/departureArrowImage"
+                app:layout_constraintStart_toEndOf="@+id/departureFlightTakeoffImage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/departureArriveTime"
+                app:layout_constraintTop_toTopOf="@+id/departureLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/departureLeaveTime"
+                android:contentDescription="@string/arrow_image_description"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_time_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureArriveTime"
+                app:layout_constraintStart_toEndOf="@+id/departureArrowImage" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/departureFlightLandImage"
+                app:layout_constraintBaseline_toBaselineOf="@+id/departureLeaveTime" android:textSize="18sp"
+                android:textColor="@color/colorDateTime"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_flight_land_24dp"
+                android:id="@+id/departureFlightLandImage" app:layout_constraintStart_toEndOf="@+id/departureArriveTime"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="@+id/departureFlightImage"
+                app:layout_constraintTop_toTopOf="@+id/departureLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/departureLeaveTime"
+                android:contentDescription="@string/flight_land_image_description"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_query_builder_24dp"
+                android:id="@+id/departureFlightTimeImage"
+                app:layout_constraintTop_toTopOf="@+id/departureLeaveTime"
+                app:layout_constraintBottom_toBottomOf="@+id/departureLeaveTime"
+                app:layout_constraintEnd_toStartOf="@+id/departureFlightTime" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" android:contentDescription="@string/flight_time_image_description"/>
+        <TextView
+                android:text=""
+                tools:text="@string/default_departure_time_flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureFlightTime" android:textSize="16sp"
+                android:textColor="@color/colorFreeSeats"
+                app:layout_constraintEnd_toEndOf="@+id/departureDateTextView"
+                app:layout_constraintTop_toTopOf="@+id/departureFlightTimeImage"
+                app:layout_constraintBottom_toBottomOf="@+id/departureFlightTimeImage"/>
+
+    </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+

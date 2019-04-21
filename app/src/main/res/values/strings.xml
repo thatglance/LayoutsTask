@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LayoutsTask</string>
+    <string name="depart_label">depart</string>
+    <string name="default_departure_date">16 sep 2019</string>
+    <string name="free_seats_label">Free seats: </string>
+    <string name="default_departure_free_seats">3</string>
+    <string name="default_return_free_seats">5</string>
+    <string name="default_cost">435 byn</string>
+    <string name="default_departure_from">msq</string>
+    <string name="default_departure_to">flo</string>
+    <string name="default_return_from">flo</string>
+    <string name="default_return_to">msq</string>
+    <string name="default_departure_time_from">00:20</string>
+    <string name="default_departure_time_to">09:20</string>
+    <string name="default_departure_time_flight">9:00</string>
+    <string name="default_return_time_from">05:10</string>
+    <string name="default_return_time_to">09:20</string>
+    <string name="default_return_time_flight">4:10</string>
+    <string name="flight_image_description">Image flight</string>
+    <string name="flight_takeoff_image_description">Image flight takeoff</string>
+    <string name="arrow_image_description">Image arrow</string>
+    <string name="flight_land_image_description">Image flight land</string>
+    <string name="flight_time_image_description">Image clock</string>
+</resources>
