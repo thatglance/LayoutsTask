@@ -178,8 +178,7 @@
                 app:layout_constraintTop_toTopOf="@+id/departureFlightTimeImage"
                 app:layout_constraintBottom_toBottomOf="@+id/departureFlightTimeImage"/>
         <TextView
-                android:text=""
-                tools:text="@string/return_label"
+                android:text="@string/return_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/returnLabel"

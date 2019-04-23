@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">LayoutsTask</string>
+    <string name="button_fragment1">fragment 1</string>
+    <string name="button_fragment2">fragment 2</string>
     <string name="depart_label">depart</string>
     <string name="return_label">return</string>
     <string name="default_departure_date">16 sep 2019</string>
@@ -24,4 +26,6 @@
     <string name="arrow_image_description">Image arrow</string>
     <string name="flight_land_image_description">Image flight land</string>
     <string name="flight_time_image_description">Image clock</string>
+    <string name="fragment_1_toast">This fragment is made with ConstraintLayout.</string>
+    <string name="fragment_2_toast">This fragment is made with RelativeLayout and LinearLayout.</string>
 </resources>

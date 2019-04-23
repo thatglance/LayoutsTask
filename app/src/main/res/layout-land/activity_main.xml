@@ -5,24 +5,25 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:background="@color/colorBackground"
         tools:context=".MainActivity">
     <FrameLayout
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="clip_vertical"
             android:layout_alignParentTop="true"
-            android:layout_above="@id/buttonsContainer"
-    />
+            android:layout_toLeftOf="@id/buttonsContainer"
+            android:layout_toStartOf="@id/buttonsContainer"/>
 
     <LinearLayout
             android:id="@+id/buttonsContainer"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:background="@color/colorBackground"
     >
         <android.support.v7.widget.AppCompatButton
@@ -30,18 +31,18 @@
                 android:text="@string/button_fragment1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
 
-                android:layout_weight="1"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginLeft="32dp"
+                android:layout_marginLeft="8dp"
                 android:textSize="18sp"
                 app:backgroundTint="@color/colorCities"
                 android:textColor="@color/colorBackground"
-        />
+                android:clickable="true" android:focusable="true"/>
 
         <android.support.v7.widget.AppCompatButton
                 android:id="@+id/buttonFragment2"
@@ -49,17 +50,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_weight="1"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginRight="32dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginLeft="8dp"
                 android:textSize="18sp"
                 app:backgroundTint="@color/colorCities"
-                android:textColor="@color/colorBackground"/>
+                android:textColor="@color/colorBackground" android:clickable="true" android:focusable="true"/>
     </LinearLayout>
-
 
 </RelativeLayout>
