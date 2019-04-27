@@ -383,7 +383,7 @@
                 android:id="@+id/floatingActionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true" android:focusable="true" app:srcCompat="@color/colorCities"
+                android:clickable="true" android:focusable="true"
                 app:backgroundTint="@color/colorCities"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/dividerReturn"

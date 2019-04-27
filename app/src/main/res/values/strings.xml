@@ -6,7 +6,7 @@
     <string name="return_label">return</string>
     <string name="default_departure_date">16 sep 2019</string>
     <string name="default_return_date">17 sep 2019</string>
-    <string name="free_seats_label">Free seats: </string>
+    <string name="free_seats_label">Free seats:</string>
     <string name="default_departure_free_seats">3</string>
     <string name="default_return_free_seats">5</string>
     <string name="default_cost_departure">435 byn</string>

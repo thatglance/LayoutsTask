@@ -18,7 +18,7 @@ class Fragment1 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment1, container, false)
         val floatingActionButton = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        floatingActionButton.setOnClickListener{
+        floatingActionButton.setOnClickListener {
             Toast.makeText(activity, R.string.fragment_1_toast, Toast.LENGTH_LONG).show()
         }
 
@@ -29,7 +29,8 @@ class Fragment1 : Fragment() {
         super.onStart()
 
         departureDateTextView.setText(R.string.default_departure_date)
-        val departureFreeSeatsText = getString(R.string.free_seats_label) + " " + getString(R.string.default_departure_free_seats)
+        val departureFreeSeatsText =
+            getString(R.string.free_seats_label) + " " + getString(R.string.default_departure_free_seats)
         freeSeatsDeparture.text = departureFreeSeatsText
         departureCostTextView.setText(R.string.default_cost_departure)
         departureFrom.setText(R.string.default_departure_from)
@@ -39,7 +40,8 @@ class Fragment1 : Fragment() {
         departureFlightTime.setText(R.string.default_departure_time_flight)
 
         returnDateTextView.setText(R.string.default_return_date)
-        val returnFreeSeatsText = getString(R.string.free_seats_label) + " " + getString(R.string.default_return_free_seats)
+        val returnFreeSeatsText =
+            getString(R.string.free_seats_label) + " " + getString(R.string.default_return_free_seats)
         freeSeatsReturn.text = returnFreeSeatsText
         returnCostTextView.setText(R.string.default_cost_return)
         returnFrom.setText(R.string.default_return_from)
